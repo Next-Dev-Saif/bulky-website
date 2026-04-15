@@ -1,0 +1,3 @@
+// CONVERT THIS FILE TO .ENV BEFORE DEPLOYING!
+
+export const MAPS_API_KEY = "";
