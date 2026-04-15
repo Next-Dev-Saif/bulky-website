@@ -1,5 +1,6 @@
 "use client";
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   ShieldCheck,
@@ -274,10 +275,11 @@ export default function SummaryStep({
                   </div>
                   {item.images?.length > 0 && (
                     <div className="w-9 h-9 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
-                      <img
+                      <Image
                         src={item.images[0].data_url}
                         alt=""
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
                   )}

@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(req) {
   try {
+    const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
     const { amount, currency = "usd", metadata } = await req.json();
 
     // Create a PaymentIntent with the specified amount

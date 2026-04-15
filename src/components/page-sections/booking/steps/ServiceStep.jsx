@@ -70,7 +70,7 @@ export default function ServiceStep({
 
   useEffect(() => {
     if (helpers < requiredHelpers) setHelpers(requiredHelpers);
-  }, [requiredHelpers]);
+  }, [requiredHelpers, helpers]);
 
   // Live pricing estimate
   const estimate = useMemo(

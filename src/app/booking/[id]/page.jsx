@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import {
   doc,
@@ -643,10 +644,11 @@ export default function BookingDetailPage() {
                     >
                       <div className="w-24 h-24 rounded-xl border border-gray-200 bg-gray-50 flex-shrink-0 overflow-hidden">
                         {item.images && item.images[0] ? (
-                          <img
+                          <Image
                             src={item.images[0]}
                             alt={item.title}
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
                           />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-gray-300">
@@ -717,7 +719,7 @@ export default function BookingDetailPage() {
                         {(item.moreInfo || item.selectedOption) && (
                           <div className="p-3 bg-gray-50 rounded-xl border border-gray-100">
                             <p className="text-xs text-gray-500 italic">
-                              "
+                              &quot;
                               {Array.isArray(
                                 item.moreInfo || item.selectedOption,
                               )
@@ -725,7 +727,7 @@ export default function BookingDetailPage() {
                                     ", ",
                                   )
                                 : item.moreInfo || item.selectedOption}
-                              "
+                              &quot;
                             </p>
                           </div>
                         )}
@@ -745,9 +747,11 @@ export default function BookingDetailPage() {
                     </h2>
                   </div>
                   <div className="group relative max-w-sm rounded-xl overflow-hidden border border-gray-200">
-                    <img
+                    <Image
                       src={deliverydetails.receiptImage}
                       alt="Booking Receipt"
+                      width={400}
+                      height={300}
                       className="w-full h-auto cursor-zoom-in hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg border border-white/20 shadow-lg">
@@ -861,10 +865,11 @@ export default function BookingDetailPage() {
                   <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 mb-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center border-2 border-white shadow-sm">
                       {displayUserPhoto ? (
-                        <img
+                        <Image
                           src={displayUserPhoto}
                           alt={displayUserName}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       ) : (
                         <span className="text-lg font-black text-primary">
@@ -934,11 +939,12 @@ export default function BookingDetailPage() {
                   ) : driverData ? (
                     <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
                       {driverData.photo ? (
-                        <div className="relative">
-                          <img
+                        <div className="relative w-11 h-11">
+                          <Image
                             src={driverData.photo}
                             alt={driverData.firstName}
-                            className="w-11 h-11 rounded-full object-cover border-2 border-white shadow-sm"
+                            fill
+                            className="rounded-full object-cover border-2 border-white shadow-sm"
                           />
                           <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full shadow-sm" />
                         </div>
@@ -1013,11 +1019,12 @@ export default function BookingDetailPage() {
                         className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 transition-all hover:bg-gray-100/50"
                       >
                         {helper.photo ? (
-                          <div className="relative">
-                            <img
+                          <div className="relative w-11 h-11">
+                            <Image
                               src={helper.photo}
                               alt={helper.firstName}
-                              className="w-11 h-11 rounded-full object-cover border-2 border-white shadow-sm"
+                              fill
+                              className="rounded-full object-cover border-2 border-white shadow-sm"
                             />
                             <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full shadow-sm" />
                           </div>

@@ -1,21 +1,36 @@
-"use client"
+"use client";
 import { useState } from "react";
-import { Calendar as CalendarIcon, Clock, Camera, X, ArrowRight, Info, AlertCircle } from "lucide-react";
+import Image from "next/image";
+import {
+  Calendar as CalendarIcon,
+  Clock,
+  Camera,
+  X,
+  ArrowRight,
+  Info,
+  AlertCircle,
+} from "lucide-react";
 import Button from "@/core-components/Button";
 import ImageUploading from "react-images-uploading";
 import { cn } from "@/utils/cn";
 
 export default function ScheduleStep({ data, onUpdate, onNext, onBack }) {
   const [date, setDate] = useState(
-    data.date ? new Date(data.date).toISOString().split("T")[0] : ""
+    data.date ? new Date(data.date).toISOString().split("T")[0] : "",
   );
   const [time, setTime] = useState(
     data.time
-      ? new Date(data.time).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false })
-      : ""
+      ? new Date(data.time).toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })
+      : "",
   );
   const [receiptImage, setReceiptImage] = useState(
-    data.deliverydetails?.receiptImage ? [data.deliverydetails.receiptImage] : []
+    data.deliverydetails?.receiptImage
+      ? [data.deliverydetails.receiptImage]
+      : [],
   );
 
   const today = new Date().toISOString().split("T")[0];
@@ -43,7 +58,6 @@ export default function ScheduleStep({ data, onUpdate, onNext, onBack }) {
 
   return (
     <div className="p-6 space-y-8">
-
       {/* Date + Time */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* Date */}
@@ -78,8 +92,8 @@ export default function ScheduleStep({ data, onUpdate, onNext, onBack }) {
       <div className="flex items-start gap-3 p-3.5 bg-blue-50 rounded-xl border border-blue-100">
         <Info size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />
         <p className="text-xs text-blue-600 leading-relaxed">
-          We recommend scheduling at least 24 hours in advance for best availability.
-          Same-day bookings may be subject to a premium.
+          We recommend scheduling at least 24 hours in advance for best
+          availability. Same-day bookings may be subject to a premium.
         </p>
       </div>
 
@@ -90,7 +104,9 @@ export default function ScheduleStep({ data, onUpdate, onNext, onBack }) {
             <h3 className="text-sm font-bold text-gray-800 flex items-center gap-1.5">
               <Camera size={15} className="text-gray-400" /> Store Receipt
             </h3>
-            <p className="text-xs text-gray-400 mt-0.5">Required for retail pickups (IKEA, Home Depot, etc.)</p>
+            <p className="text-xs text-gray-400 mt-0.5">
+              Required for retail pickups (IKEA, Home Depot, etc.)
+            </p>
           </div>
           <span className="text-[10px] font-bold uppercase tracking-wider bg-gray-100 text-gray-400 px-2 py-1 rounded-md">
             Optional
@@ -103,7 +119,13 @@ export default function ScheduleStep({ data, onUpdate, onNext, onBack }) {
           maxNumber={1}
           dataURLKey="data_url"
         >
-          {({ imageList, onImageUpload, onImageRemove, isDragging, dragProps }) => (
+          {({
+            imageList,
+            onImageUpload,
+            onImageRemove,
+            isDragging,
+            dragProps,
+          }) => (
             <div>
               {imageList.length === 0 ? (
                 <button
@@ -113,23 +135,28 @@ export default function ScheduleStep({ data, onUpdate, onNext, onBack }) {
                     "w-full py-10 rounded-xl border-2 border-dashed flex flex-col items-center justify-center gap-2.5 transition-all",
                     isDragging
                       ? "border-primary bg-primary/5"
-                      : "border-gray-200 bg-gray-50 hover:border-primary/40 hover:bg-gray-50"
+                      : "border-gray-200 bg-gray-50 hover:border-primary/40 hover:bg-gray-50",
                   )}
                 >
                   <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-gray-400 shadow-sm">
                     <Camera size={18} />
                   </div>
                   <div className="text-center">
-                    <p className="text-sm font-bold text-gray-600">Click or drag to upload</p>
-                    <p className="text-xs text-gray-400 mt-0.5">JPG, PNG or WEBP</p>
+                    <p className="text-sm font-bold text-gray-600">
+                      Click or drag to upload
+                    </p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      JPG, PNG or WEBP
+                    </p>
                   </div>
                 </button>
               ) : (
                 <div className="relative rounded-xl overflow-hidden border border-gray-200 group aspect-video bg-gray-50">
-                  <img
+                  <Image
                     src={imageList[0]["data_url"]}
                     alt="Receipt"
-                    className="w-full h-full object-contain"
+                    fill
+                    className="object-contain"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <button
@@ -150,14 +177,22 @@ export default function ScheduleStep({ data, onUpdate, onNext, onBack }) {
       {!canProceed && (
         <div className="flex items-center gap-2 p-3 bg-orange-50 rounded-xl border border-orange-100">
           <AlertCircle size={14} className="text-orange-400 flex-shrink-0" />
-          <p className="text-xs font-medium text-orange-600">Please select a date and time to continue.</p>
+          <p className="text-xs font-medium text-orange-600">
+            Please select a date and time to continue.
+          </p>
         </div>
       )}
 
       {/* Footer */}
       <div className="flex items-center justify-between pt-2 border-t border-gray-100">
-        <Button variant="outline" onClick={onBack}>Back</Button>
-        <Button onClick={handleNext} disabled={!canProceed} className="group rounded-full">
+        <Button variant="outline" onClick={onBack}>
+          Back
+        </Button>
+        <Button
+          onClick={handleNext}
+          disabled={!canProceed}
+          className="group rounded-full"
+        >
           Review Order
           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
         </Button>
