@@ -176,7 +176,7 @@ const LoginForm = () => {
 
         <div className="text-center mt-8">
           <p className="text-text-light text-sm">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
               href="/auth/signup"
               className="text-primary font-bold hover:underline"

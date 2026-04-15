@@ -89,7 +89,7 @@ const ForgotPasswordFlow = () => {
       <AuthStepWrapper
         illustration="/images/auth/forgot-step1.png"
         title="Check Your Email"
-        description={`We've sent a password reset link to ${email}. Please check your inbox and follow the instructions.`}
+        description={`We&apos;ve sent a password reset link to ${email}. Please check your inbox and follow the instructions.`}
         onBack={handleBack}
       >
         <div className="mt-10 flex flex-col items-center space-y-8">
@@ -117,7 +117,7 @@ const ForgotPasswordFlow = () => {
             onClick={handleResetSubmit}
             className="text-primary font-bold hover:underline"
           >
-            Didn't receive email? Resend
+            Didn&apos;t receive email? Resend
           </button>
         </div>
       </AuthStepWrapper>

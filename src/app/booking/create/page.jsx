@@ -30,7 +30,7 @@ const STEPS = [
   {
     id: "items",
     title: "Items",
-    description: "Select what you're moving",
+    description: "Select what you&apos;re moving",
     icon: Package,
   },
   {

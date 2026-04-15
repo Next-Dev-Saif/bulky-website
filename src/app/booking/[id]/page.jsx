@@ -315,8 +315,8 @@ export default function BookingDetailPage() {
             Booking Not Found
           </h2>
           <p className="text-gray-500 mt-3">
-            We couldn't find the booking you're looking for or you don't have
-            permission to view it.
+            We couldn&apos;t find the booking you&apos;re looking for or you
+            don&apos;t have permission to view it.
           </p>
           <button
             onClick={() => router.push("/dashboard")}
@@ -1082,8 +1082,8 @@ export default function BookingDetailPage() {
                       Team Allocation Pending
                     </p>
                     <p className="text-[10px] text-gray-400 px-4 mt-1">
-                      We'll update this as soon as a team is assigned to your
-                      slot.
+                      We&apos;ll update this as soon as a team is assigned to
+                      your slot.
                     </p>
                   </div>
                 )}

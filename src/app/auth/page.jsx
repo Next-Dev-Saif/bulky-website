@@ -3,7 +3,8 @@ import AuthStepWrapper from "@/components/page-sections/auth/AuthStepWrapper";
 
 export const metadata = {
   title: "Login | Bulky - Move Bulk with Ease",
-  description: "Login to your Bulky account to manage your deliveries, track orders, and more.",
+  description:
+    "Login to your Bulky account to manage your deliveries, track orders, and more.",
 };
 
 export default function LoginPage() {
