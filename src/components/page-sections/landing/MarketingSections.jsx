@@ -106,7 +106,7 @@ const MarketingSections = () => {
               Deliveries Made <span className="text-primary">Effortless</span>
             </h2>
             <p className="text-text-light text-lg leading-relaxed mb-8">
-              Whether you're buying a couch from a marketplace, sending a treadmill
+              Whether you&apos;re buying a couch from a marketplace, sending a treadmill
               to a friend, or need a large store pickup, Bulky makes it simple.
               Get instant quotes, choose your preferred driver, and track
               your items in real-time.
