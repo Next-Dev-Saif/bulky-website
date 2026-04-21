@@ -44,7 +44,7 @@ const Hero = () => {
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 text-heading animate-elastic-left">
-              Move Anything,{" "}
+              Deliver Anything,{" "}
               <span className="relative inline-block">
                 <span className="text-primary">Anywhere</span>
                 <svg
@@ -66,8 +66,9 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-lg text-text-light mb-8 max-w-xl leading-relaxed animate-bounce-in-up delay-200">
-              From furniture to appliances, Bulky connects you with verified
-              drivers for fast, secure, and affordable bulky item delivery.
+              From furniture and appliances to marketplace finds, Bulky connects
+              you with verified drivers for fast, secure delivery of your large
+              items. Professional service, item by item.
             </p>
 
             {/* CTA Buttons */}
@@ -131,13 +132,13 @@ const Hero = () => {
             {/* Decorative ring */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div
-                className="w-[90%] h-[90%] border-2 border-dashed border-primary/10 rounded-full animate-spin"
+                className="w-[90%]  aspect-square border-2 border-dashed  border-primary/20 rounded-full animate-spin"
                 style={{ animationDuration: "30s" }}
               />
             </div>
 
             {/* Floating elements */}
-            <div className="absolute top-10 right-10 bg-white rounded-2xl p-4 shadow-xl animate-float">
+            <div className="absolute top-10 z-[3] right-10 bg-white rounded-2xl p-4 shadow-xl animate-float">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                   <Truck size={20} className="text-green-600" />
@@ -151,7 +152,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-20 left-0 bg-white rounded-2xl p-4 shadow-xl animate-float delay-500">
+            <div className="absolute z-[3] bottom-20 left-0 bg-white rounded-2xl p-4 shadow-xl animate-float delay-500">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   {[1, 2, 3].map((i) => (
@@ -168,7 +169,7 @@ const Hero = () => {
             </div>
 
             <Image
-              src="/images/hero-main.svg"
+              src="/images/hero-main-image.png"
               alt="Bulky Delivery Service"
               fill
               className="object-contain drop-shadow-2xl"

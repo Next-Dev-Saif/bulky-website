@@ -22,14 +22,14 @@ import {
 const services = [
   {
     icon: Home,
-    title: "Residential Moving",
+    title: "Item Delivery",
     description:
-      "Complete home moving services for apartments, houses, and condos. We handle everything from single items to full household moves.",
+      "Professional delivery for individual bulky items like furniture, exercise equipment, and appliances. We focus on getting your single items from A to B safely.",
     features: [
-      "Furniture disassembly & reassembly",
-      "Careful handling of fragile items",
-      "Same-day service available",
-      "Insurance coverage included",
+      "Furniture assembly & placement",
+      "Careful handling of large items",
+      "Same-day pickup available",
+      "Full insurance coverage",
     ],
     color: "from-amber-400 to-orange-500",
     image: "/why-us/easy-booking.svg",
@@ -220,8 +220,8 @@ export default function ServicesPage() {
               Services Built for <span className="text-primary">You</span>
             </h2>
             <p className="text-text-light text-lg max-w-2xl mx-auto">
-              From residential moves to commercial deliveries, we have got every
-              scenario covered.
+              From individual item deliveries to commercial logistics, we have
+              got every scenario covered.
             </p>
           </div>
 

@@ -48,18 +48,17 @@ const MarketingSections = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div
             ref={section1ImagesRef}
-            className={`relative transition-all duration-1000 ${
-              section1ImagesVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-12"
-            }`}
+            className={`relative transition-all duration-1000 ${section1ImagesVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-12"
+              }`}
           >
             {/* Main image stack with floating effect */}
             <div className="relative">
               <div className="flex gap-4">
                 <div className="relative h-[380px] w-full rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl transition-shadow duration-500">
                   <Image
-                    src="/section-three/1.png"
+                    src="/section-three/1.jpg"
                     alt="Professional delivery driver"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -68,8 +67,8 @@ const MarketingSections = () => {
                 </div>
                 <div className="relative h-[380px] w-full mt-12 rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl transition-shadow duration-500">
                   <Image
-                    src="/section-three/2.png"
-                    alt="Delivery truck on the road"
+                    src="/section-three/2.jpg"
+                    alt="Delivery QR Verification"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -94,34 +93,32 @@ const MarketingSections = () => {
 
           <div
             ref={section1ContentRef}
-            className={`transition-all duration-1000 delay-200 ${
-              section1ContentVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-12"
-            }`}
+            className={`transition-all duration-1000 delay-200 ${section1ContentVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-12"
+              }`}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full text-primary text-sm font-semibold mb-6">
               <User size={16} />
               For Individuals
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-heading">
-              Moving Made <span className="text-primary">Effortless</span>
+              Deliveries Made <span className="text-primary">Effortless</span>
             </h2>
             <p className="text-text-light text-lg leading-relaxed mb-8">
-              Whether you are moving to a new apartment, buying furniture from a
-              marketplace, or sending items to family, Bulky makes it simple.
+              Whether you're buying a couch from a marketplace, sending a treadmill
+              to a friend, or need a large store pickup, Bulky makes it simple.
               Get instant quotes, choose your preferred driver, and track
-              everything in real-time.
+              your items in real-time.
             </p>
             <ul ref={features1Ref} className="space-y-4">
               {featuresList1.map((feature, index) => (
                 <li
                   key={feature}
-                  className={`group flex items-center gap-4 transition-all duration-700 ${
-                    features1Visible.includes(index)
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-0 translate-x-5"
-                  }`}
+                  className={`group flex items-center gap-4 transition-all duration-700 ${features1Visible.includes(index)
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-5"
+                    }`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
                   <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -140,11 +137,10 @@ const MarketingSections = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div
             ref={section2ContentRef}
-            className={`order-2 lg:order-1 transition-all duration-1000 ${
-              section2ContentVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-12"
-            }`}
+            className={`order-2 lg:order-1 transition-all duration-1000 ${section2ContentVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-12"
+              }`}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 rounded-full text-amber-600 text-sm font-semibold mb-6">
               <Building2 size={16} />
@@ -163,11 +159,10 @@ const MarketingSections = () => {
               {featuresList2.map((feature, index) => (
                 <li
                   key={feature}
-                  className={`group flex items-center gap-4 transition-all duration-700 ${
-                    features2Visible.includes(index)
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-0 translate-x-5"
-                  }`}
+                  className={`group flex items-center gap-4 transition-all duration-700 ${features2Visible.includes(index)
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-5"
+                    }`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
                   <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -181,16 +176,15 @@ const MarketingSections = () => {
 
           <div
             ref={section2ImageRef}
-            className={`order-1 lg:order-2 transition-all duration-1000 delay-200 ${
-              section2ImageVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-12"
-            }`}
+            className={`order-1 lg:order-2 transition-all duration-1000 delay-200 ${section2ImageVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-12"
+              }`}
           >
             <div className="relative">
               <div className="relative h-[480px] w-full rounded-3xl overflow-hidden shadow-2xl group">
                 <Image
-                  src="/section-four/truck.png"
+                  src="/section-four/delivery-man.jpg"
                   alt="Professional delivery fleet"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"

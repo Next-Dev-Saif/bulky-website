@@ -2,6 +2,7 @@ import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/globals/Navbar";
 import Footer from "@/components/globals/Footer";
+import { AuthProvider } from "@/context/AuthContext";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,12 +17,12 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Bulky - Your Ultimate Solution for Moving Bulk with Ease!",
-  description: "Moving large items has never been easier. Fast, secure, and reliable delivery services for all your bulky needs.",
-  keywords: ["logistics", "delivery", "bulky", "moving", "transportation"],
+  title: "Bulky - Reliable Bulk Delivery Services for Your Business and Home",
+  description: "Bulky provides professional, secure, and efficient delivery services for large items. From furniture to industrial equipment, we handle your bulky logistics with care.",
+  keywords: ["bulk delivery", "logistics", "large item transport", "courier services", "furniture delivery"],
 };
 
-import { AuthProvider } from "@/context/AuthContext";
+
 
 export default function RootLayout({ children }) {
   return (

@@ -100,7 +100,7 @@ export default function AboutUsPage() {
                 }`}
               >
                 Delivering <span className="text-primary">Excellence</span>, One
-                Move at a Time
+                Item at a Time
               </h1>
 
               <p

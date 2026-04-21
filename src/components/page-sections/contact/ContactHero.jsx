@@ -21,9 +21,9 @@ const ContactHero = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-lg md:text-xl text-[#525558] max-w-4xl mx-auto leading-relaxed"
         >
-          Have questions about moving bulky items? Whether you are a business
+          Have questions about delivering bulky items? Whether you are a business
           looking for logistics solutions or an individual needing a one-time
-          move, our team is here to help you every step of the way.
+          delivery, our team is here to help you every step of the way.
         </motion.p>
       </div>
     </section>
