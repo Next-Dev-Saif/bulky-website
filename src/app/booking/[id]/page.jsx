@@ -604,9 +604,9 @@ export default function BookingDetailPage() {
                       <Clock size={14} className="text-gray-400" />
                       {time
                         ? new Date(time).toLocaleTimeString([], {
-                            hour: "2-digit",
-                            minute: "2-digit",
-                          })
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })
                         : "Pending"}
                     </p>
                   </div>
@@ -724,8 +724,8 @@ export default function BookingDetailPage() {
                                 item.moreInfo || item.selectedOption,
                               )
                                 ? (item.moreInfo || item.selectedOption).join(
-                                    ", ",
-                                  )
+                                  ", ",
+                                )
                                 : item.moreInfo || item.selectedOption}
                               &quot;
                             </p>
@@ -865,10 +865,11 @@ export default function BookingDetailPage() {
                   <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 mb-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center border-2 border-white shadow-sm">
                       {displayUserPhoto ? (
-                        <Image
+                        <img
                           src={displayUserPhoto}
                           alt={displayUserName}
-                          fill
+
+
                           className="object-cover"
                         />
                       ) : (
@@ -1227,9 +1228,9 @@ export default function BookingDetailPage() {
                   <p className="font-semibold text-gray-900">
                     {time
                       ? new Date(time).toLocaleTimeString([], {
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })
                       : "N/A"}
                   </p>
                 </div>
